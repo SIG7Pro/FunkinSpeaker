@@ -36,7 +36,7 @@ enum Control
 	#end
 }
 
-@:enum
+enum
 abstract Action(String) to String from String
 {
 	var UI_UP      = "ui_up";

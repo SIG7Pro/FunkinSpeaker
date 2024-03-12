@@ -1,6 +1,7 @@
 package;
 #if newgrounds
-
+// Note: This file is bound to be removed as I remove most traces of Newgrounds from this. Mainly since Newgrounds disallows mods of video games to be uploaded to the site. Not like you were going to, right?
+// Also it prevents cheaters from uploading fake scores to the leaderboard, though that's already been done already. :(
 import flixel.FlxG;
 import flixel.util.FlxSignal;
 import flixel.util.FlxTimer;

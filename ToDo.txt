@@ -4,3 +4,4 @@ Add Memory Leaks
 Reference RGF
 Fix 9-Button Easter Egg
 Become RGF friend
+Make the game work with current versions of libraries.

@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Speaker Engine" file="Funkin" packageName="com.ElastedAlorian.FunkinSpeaker" package="com.ElastedAlorian.FunkinSpeaker" main="Main" version="0.2.8.1" company="ninjamuffin99" />
+	<app title="Friday Night Funkin': Speaker Engine" file="Funkin" packageName="com.ElastedAlorian.FunkinSpeaker" package="com.ElastedAlorian.FunkinSpeaker" main="Main" version="0.2.8.1" company="ElastedAlorian" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -45,8 +45,8 @@
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/preload" rename="assets" exclude="*.mp3" unless="web"/>
 	
-	<!-- <define name="PRELOAD_ALL" /> -->
-	<define name="PRELOAD_ALL" unless="web" />
+	<define name="PRELOAD_ALL" />
+	<!--<define name="PRELOAD_ALL" unless="web" />-->
 	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
 	
 	<section if="PRELOAD_ALL">
@@ -79,22 +79,22 @@
 	<assets path="assets/songs"    library="songs"    exclude="*.fla|*.mp3" unless="web"/>
 	<assets path="assets/shared"   library="shared"   exclude="*.fla|*.ogg" if="web"/>
 	<assets path="assets/shared"   library="shared"   exclude="*.fla|*.mp3" unless="web"/>
-	<assets path="assets/tutorial" library="tutorial" exclude="*.fla|*.ogg" if="web"/>
-	<assets path="assets/tutorial" library="tutorial" exclude="*.fla|*.mp3" unless="web"/>
-	<assets path="assets/week1"    library="week1"    exclude="*.fla|*.ogg" if="web"/>
-	<assets path="assets/week1"    library="week1"    exclude="*.fla|*.mp3" unless="web"/>
-	<assets path="assets/week2"    library="week2"    exclude="*.fla|*.ogg" if="web"/>
-	<assets path="assets/week2"    library="week2"    exclude="*.fla|*.mp3" unless="web"/>
-	<assets path="assets/week3"    library="week3"    exclude="*.fla|*.ogg" if="web"/>
-	<assets path="assets/week3"    library="week3"    exclude="*.fla|*.mp3" unless="web"/>
-	<assets path="assets/week4"    library="week4"    exclude="*.fla|*.ogg" if="web"/>
-	<assets path="assets/week4"    library="week4"    exclude="*.fla|*.mp3" unless="web"/>
-	<assets path="assets/week5"    library="week5"    exclude="*.fla|*.ogg" if="web"/>
-	<assets path="assets/week5"    library="week5"    exclude="*.fla|*.mp3" unless="web"/>
-	<assets path="assets/week6"    library="week6"    exclude="*.fla|*.ogg" if="web"/>
-	<assets path="assets/week6"    library="week6"    exclude="*.fla|*.mp3" unless="web"/>
-	<assets path="assets/week7"    library="week7"    exclude="*.fla|*.ogg" if="web"/>
-	<assets path="assets/week7"    library="week7"    exclude="*.fla|*.mp3" unless="web"/>
+	<assets path="assets/customData/tutorial" library="tutorial" exclude="*.fla|*.ogg" if="web"/>
+	<assets path="assets/customData/tutorial" library="tutorial" exclude="*.fla|*.mp3" unless="web"/>
+	<assets path="assets/customData/week1"    library="week1"    exclude="*.fla|*.ogg" if="web"/>
+	<assets path="assets/customData/week1"    library="week1"    exclude="*.fla|*.mp3" unless="web"/>
+	<assets path="assets/customData/week2"    library="week2"    exclude="*.fla|*.ogg" if="web"/>
+	<assets path="assets/customData/week2"    library="week2"    exclude="*.fla|*.mp3" unless="web"/>
+	<assets path="assets/customData/week3"    library="week3"    exclude="*.fla|*.ogg" if="web"/>
+	<assets path="assets/customData/week3"    library="week3"    exclude="*.fla|*.mp3" unless="web"/>
+	<assets path="assets/customData/week4"    library="week4"    exclude="*.fla|*.ogg" if="web"/>
+	<assets path="assets/customData/week4"    library="week4"    exclude="*.fla|*.mp3" unless="web"/>
+	<assets path="assets/customData/week5"    library="week5"    exclude="*.fla|*.ogg" if="web"/>
+	<assets path="assets/customData/week5"    library="week5"    exclude="*.fla|*.mp3" unless="web"/>
+	<assets path="assets/customData/week6"    library="week6"    exclude="*.fla|*.ogg" if="web"/>
+	<assets path="assets/customData/week6"    library="week6"    exclude="*.fla|*.mp3" unless="web"/>
+	<assets path="assets/customData/week7"    library="week7"    exclude="*.fla|*.ogg" if="web"/>
+	<assets path="assets/customData/week7"    library="week7"    exclude="*.fla|*.mp3" unless="web"/>
 	
 	<!-- <assets path='example_mods' rename='mods' embed='false'/> -->
 
@@ -105,12 +105,7 @@
 	
 	<assets path="CHANGELOG.md" rename='changelog.txt'/>
 
-	<!-- NOTE FOR FUTURE SELF SINCE FONTS ARE ALWAYS FUCKY 
-		TO FIX ONE OF THEM, I CONVERTED IT TO OTF. DUNNO IF YOU NEED TO
-		THEN UHHH I USED THE NAME OF THE FONT WITH SETFORMAT() ON THE TEXT!!!
-		NOT USING A DIRECT THING TO THE ASSET!!!
-	-->
-	<assets path="assets/fonts" embed='true'/>
+	<assets path="assets/fonts" embed='false'/>
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel" />
@@ -125,7 +120,7 @@
 	<!--haxelib name="newgrounds" unless="switch"/> -->
 	<haxelib name="faxe" if='switch'/>
 	<haxelib name="polymod"/>
-	<haxelib name="newgrounds"/>
+	<!--<haxelib name="newgrounds"/> Won't be compatible with Newgrounds for clear reasons.-->
 	<haxelib name="hxcpp-debug-server" if="desktop debug"/>
 	
 	<!-- <haxelib name="flixel-animate" /> -->
@@ -178,10 +173,10 @@
 
 	<!--Place custom nodes like icons here (higher priority to override the HaxeFlixel icon)-->
 	
-	<icon path="art/icon16.png" size='16'/>
-	<icon path="art/icon32.png" size='32'/>
-	<icon path="art/icon64.png" size='64'/>
-	<icon path="art/iconOG.png" />
+	<icon path="assets/preload/images/icons/icon16.png" size='16'/>
+	<icon path="assets/preload/images/icons/icon32.png" size='32'/>
+	<icon path="assets/preload/images/icons/icon64.png" size='64'/>
+	<icon path="assets/preload/images/iconsrt/iconOG.png" />
 
 
 	<!-- <haxedef name="SKIP_TO_PLAYSTATE" if="debug" /> -->
