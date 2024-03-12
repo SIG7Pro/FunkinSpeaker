@@ -1,7 +1,12 @@
-Add Bedtime Story
-Add Many Pessie Boobs
-Add Memory Leaks
-Reference RGF
-Fix 9-Button Easter Egg
-Become RGF friend
-Make the game work with current versions of libraries.
+To Do List
+Please note that some of these are blatant jokes.
+- Add Bedtime Story
+- Add Many Pessie Boobs
+- Add Memory Leaks
+- Reference RGF
+- Fix 9-Button Easter Egg
+- Become RGF friend
+- Make the game work with current versions of libraries.
+  - {Complete! (For the most part. The menus bug out. Have to fix.)}
+  - Since the commit broke, the main files I altered were this to do list, Project.xml, Controls.hx, Main.hx, NGio.hx, InputFormatter.hx, ModMenu.hx, and PlayState.hx.
+    - I also had to add and edit Polymod.hx and PolymodAssets.hx from Polymod 1.7.0.
